@@ -1,0 +1,66 @@
+<html>
+<title>Edit-User</title>
+<head>
+    <h1 align="center" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:black; text-decoration: underline;position:absolute;left:4%;top:1%;font-size:50px;">Edit Form</h1>
+  </head>
+<script>
+  function myFunction() {
+alert("User Edited Successfully");
+  }
+  </script>
+<style>
+   body{
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+div{
+    position:absolute;
+    left:550px;
+    top:70px;
+    font-size:30px;
+}
+.button {
+    position:absolute;
+    top:685;
+    left:100;
+  font-size: 22px ;
+  text-decoration: none;
+  background-color:black;
+  color: white;
+  padding: 6px 10px 6px 10px;
+
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<body>
+    <div>
+    <form method="post" >
+       Enter Name:<br>
+        <input type="text" value=<%=users.name%> name="name" style="height:30px;width:240px;"><br><br>
+        Enter Address:<br>
+        <input type="text" value=<%=users.address%> name="name" style="height:30px;width:240px;"><br><br>
+        Enter Mobile Number:<br>
+        <input type="tel" value=<%=users.mobile%> name="mobile" style="height:30px;width:240px;"><br><br>
+        Enter Email:<br>
+        <input type="email" value=<%=users.email%> name="email" style="height:30px;width:240px;"><br><br>
+        Enter DOB:<br>
+        <input type="date" value=<%=users.dob%> name="dob" style="height:30px;width:240px;"><br><br>
+        Enter Card Number:<br>
+        <input type="tel" value=<%=users.card%> name="mobile" style="height:30px;width:240px;"><br><br>
+        Enter Card Expiry:<br>
+        <input type="date" value=<%=users.carde%> name="dob" style="height:30px;width:240px;"><br><br>
+        <button onclick="myFunction()">Submit</button>
+        <a href="/display" class="button">Cancel</a>
+        
+        
+    </form>
+    </div>
+</body>
+</html>

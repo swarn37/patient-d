@@ -1,0 +1,71 @@
+<%- include('header'); -%>
+<br>
+<br>
+
+<html>
+                <title>Products</title>
+                <script>
+                        function myFunction() {
+                      alert("User Deleted Successfully");
+                        }
+                        </script>
+                         
+<style>
+      
+        div{
+               background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+                height:510px;
+                width:350px;
+                margin:0 auto;
+                border:2px solid #000000;
+                font-size:22px;
+                font-family:Arial;
+                
+                
+         }
+         body{
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+a.button:link, a.button:visited {
+  background-color: black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover, a.button:active {
+  background-color:grey;
+}
+    
+</style>
+<% if(users.length>0) { %>
+
+   
+        <% for(var i=0;i<users.length;i++) { %>
+            
+                <div align="center">
+               <p>#<%= i+1 %></p>
+                <p>Name : <%= users[i].name %></p>
+                <p>Address : <%= users[i].address %></p>
+                <p> Mobile : <%= users[i].mobile %></p>
+                <p>email : <%= users[i].email %></p>
+                <p>Date of Birth : <%= users[i].dob %></p>
+                <p>Card : <%= users[i].card %></p>
+                <p>Card Expiry : <%= users[i].carde %></p>
+                <td>
+                    <a href='/edit/<%=users[i]._id %>'><button type="button" style="font-size:20px; margin:0 auto; background-color:green;color:white;border:2px solid white;">Edit</button></a>
+                    <a href='/delete/<%=users[i]._id %>'><button type="button" onclick="myFunction()" style="font-size:20px; margin:0 auto; background-color:green;color:white;border:2px solid white;">Delete</button></a>
+              
+            <br><br><br>
+            <% } %>
+
+                </div>
+    
+
+    <% } else { %>
+     
+    <br><br> <br> <br><br><br><br> <br><br>   <p style="font-size:50px; color:red; margin-left:50"></p>No Record Found</p>
+<% } %>
+</html>

@@ -1,0 +1,62 @@
+
+<%- include('header'); -%>
+<html>
+<title>Project</title>
+
+<style>
+    
+    a.button:link, a.button:visited {
+  background-color: black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover, a.button:active {
+  background-color:grey;
+}
+    body{
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+div{
+    position:absolute;
+    left:540px;
+    top:80px;
+    font-size:35px;
+}
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 20px;
+}
+</style>
+<body>
+    <div>
+    <form method="post" action="/adduser">
+       User Name:<br>
+        <input type="text" placeholder="Name here" name="name" style="height:30px;width:240px;"><br><br>
+        User Address:<br>
+        <input type="text" placeholder="Address here" name="address" style="height:30px;width:240px;"><br><br>
+        Enter Mobile No.:<br>
+        <input type="tel" placeholder="phone number here" name="mobile" style="height:30px;width:240px;"><br><br>
+        Enter Email:<br>
+        <input type="email" placeholder="email here" name="email" style="height:30px;width:240px;"><br><br>
+        Enter Date Of Birth:<br>
+        <input type="date" placeholder="Quantity here" name="dob" style="height:30px;width:240px;"><br><br>
+        Enter Card No.:<br>
+        <input type="tel" placeholder="Card number here" name="card" style="height:30px;width:240px;"><br><br>
+        Enter Card Expiry:<br>
+        <input type="date" placeholder="Card expiry date here" name="carde" style="height:30px;width:240px;"><br><br>
+    <button type="submit" onclick="myFunction()" class="button">Submit</button>
+      
+        
+    </form>
+    </div>
+ 
+</body>
+</html>
